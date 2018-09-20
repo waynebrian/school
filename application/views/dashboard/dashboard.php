@@ -1,57 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Welcome</title>
-    <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-      <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">LOGO</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <!--ACCESS MENUS FOR ADMIN-->
-                <?php if($this->session->userdata('level')==='1'):?>
-                  <li class="active"><a href="#">Dashboard</a></li>
-                  <li><a href="#">Posts</a></li>
-                  <li><a href="#">Pages</a></li>
-                  <li><a href="#">Media</a></li>
-                <!--ACCESS MENUS FOR STAFF-->
-                <?php elseif($this->session->userdata('level')==='2'):?>
-                  <li class="active"><a href="#">Dashboard</a></li>
-                  <li><a href="#">Pages</a></li>
-                  <li><a href="#">Media</a></li>
-                <!--ACCESS MENUS FOR AUTHOR-->
-                <?php else:?>
-                  <li class="active"><a href="#">Dashboard</a></li>
-                  <li><a href="#">Posts</a></li>
-                <?php endif;?>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo site_url('login/logout');?>">Sign Out</a></li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div><!--/.container-fluid -->
+
+<title><?php echo $title ?></title>
+<link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
+<link href="<?php echo base_url('assets/css/dashboard/dashboard.css');?>" rel="stylesheet">
+
+<nav id="mainNav">
+    <p>Main Nav</p>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <nav id="sideNav" class="col-lg-3">
+            <p>Side Nav</p>
         </nav>
 
-        <div class="jumbotron">
-          <h1>Welcome Back <?php echo $this->session->userdata('username');?></h1>
+        <div id="mainContent" class="col-lg-9">
+            <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds
+            qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf
+            qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe
+                qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
+                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
+
+            <div class="col-lg-6">
+                <p>Col 2</p>
+            </div>
+
+            <div class="col-lg-6">
+                <p>Col 3</p>
+            </div>
+
+            <div class="col-lg-6">
+                <p>Col 2</p>
+            </div>
+
+            <div class="col-lg-6">
+                <p>Col 3</p>
+            </div>
         </div>
 
-      </div>
     </div>
+</div>
 
-    <script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
-  </body>
-</html>
+
+  <script src="<?php echo base_url('assets/js/dashboard/dashboard.js');?>" type="text/javascript"></script>

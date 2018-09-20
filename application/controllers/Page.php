@@ -11,6 +11,7 @@ class Page extends CI_Controller{
     //Access for Admin
       if($this->session->userdata('level')==='1'){
           $data['title'] ='dashboard';
+          $this->load->helper('url');
           $this->load->view('header');
           $this->load->view('dashboard/dashboard', $data);
       }else{
@@ -24,6 +25,7 @@ class Page extends CI_Controller{
     if($this->session->userdata('level')==='2'){
       $data['title'] ='dashboard';
       $this->load->view('header');
+      $this->load->helper('url');
       $this->load->view('dashboard/dashboard', $data);
     }else{
         echo "Access Denied";
@@ -35,6 +37,7 @@ class Page extends CI_Controller{
     if($this->session->userdata('level')==='3'){
       $data['title'] ='dashboard';
       $this->load->view('header');
+      $this->load->helper('url');
       $this->load->view('dashboard/dashboard', $data);
     }else{
         echo "Access Denied";
